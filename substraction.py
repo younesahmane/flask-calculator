@@ -1,7 +1,7 @@
 from flask import Flask
-from abstract_class_calculation import Calculator
+from calculator import Calculator
 
 
 class Substraction(Calculator):
-    def calculate(self, num1, num2):
-        return num1 - num2
+    def calculate(self):
+        return self.numberA - self.numberB
