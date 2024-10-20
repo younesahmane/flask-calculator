@@ -3,25 +3,25 @@ from calculator import Add, Subtract, Multiply, Divide  # Assume this is how cla
 
 app = Flask(__name__)
 
-@app.route('/add/<int:numberA>/<int:numberB>')
+@app.route('/add/<float:numberA>/<float:numberB>')
 def add_route(numberA, numberB):
     operation = Add(numberA, numberB)
     result = operation.calculate()
     return jsonify({"status": 200, "result": result})
 
-@app.route('/subtract/<int:numberA>/<int:numberB>')
+@app.route('/subtract/<float:numberA>/<float:numberB>')
 def subtract_route(numberA, numberB):
     operation = Subtract(numberA, numberB)
     result = operation.calculate()
     return jsonify({"status": 200, "result": result})
 
-@app.route('/multiply/<int:numberA>/<int:numberB>')
+@app.route('/multiply/<float:numberA>/<float:numberB>')
 def multiply_route(numberA, numberB):
     operation = Multiply(numberA, numberB)
     result = operation.calculate()
     return jsonify({"status": 200, "result": result})
 
-@app.route('/divide/<int:numberA>/<int:numberB>')
+@app.route('/divide/<float:numberA>/<float:numberB>')
 def divide_route(numberA, numberB):
     try:
         operation = Divide(numberA, numberB)
