@@ -104,5 +104,5 @@ Run the Application:
     flask run
 
 Accessing the API:
-    The API will be available at http://127.0.0.1:5000.
+    The API will be available at http://[127.0.0.1:5000](http://127.0.0.1:5000/).
     Test the calculator by making HTTP requests to the appropriate endpoints (e.g., using a browser or a tool like Postman)
